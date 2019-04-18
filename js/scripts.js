@@ -13,11 +13,15 @@ map.on('style.load', function(){
 map.addSource('greenpoint_pluto',{
   type: 'geojson',
   data: './data/greenpoint_pluto.geojson'
-})
+});
 
 map.addLayer({
   id:'greenpoint-lots-fill',
   type: 'fill',
   source: 'greenpoint_pluto',
+  paint: {
+    'fill-opacity':0.7,
+  }
+
 })
-})
+});
